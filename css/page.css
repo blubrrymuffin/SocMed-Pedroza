@@ -1,0 +1,449 @@
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Pacifico&display=swap";
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.loginPage {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dff1e3;
+}
+
+.loginPage .loginGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 3fr);
+    height: 80vh;
+    width: 60%;
+    font-family: "Poppins";
+}
+
+.loginPage .loginGrid .loginImage {
+    background-color: #e5feee;
+    border-radius: 30px 0 0 30px;
+}
+
+.loginPage .loginGrid .loginForm {
+    display: flex;
+    justify-content: center;
+    align-items: none;
+    flex-direction: column;
+    padding: 0 120px;
+    background-color: #fafffb;
+    border-radius: 0 30px 30px 0;
+    color: #a4a6aa;
+}
+
+.loginPage .loginGrid .loginForm h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "Pacifico";
+}
+
+.loginPage .loginGrid .loginForm h1 span {
+    color: #79a185;
+}
+
+.loginPage .loginGrid .loginForm .input-container {
+    margin: 20px 0;
+}
+
+.loginPage .loginGrid .loginForm .input-container label {
+    font-size: 15px;
+    color: #9c9e9d;
+}
+
+.loginPage .loginGrid .loginForm .input-container input {
+    margin-top: 5px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px #9c9e9d solid;
+}
+
+.loginPage .loginGrid .loginForm input[type=submit] {
+    background: #273238;
+    width: 100%;
+    padding: 12px;
+    color: #fafffb;
+    border-radius: 5px;
+    border: none;
+    margin-top: 20px;
+}
+
+.loginPage .loginGrid .loginForm .hr {
+    margin-top: 50px;
+    text-align: center;
+    color: #9c9e9d;
+}
+
+.loginPage .loginGrid .loginForm .register {
+    text-align: center;
+    margin-top: 50px;
+}
+
+input[type=submit] {
+    cursor: pointer;
+}
+
+a {
+    color: #79a185;
+}
+
+@media only screen and (max-width: 1280px) {
+    .loginPage .loginGrid {
+        height: 80vh;
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    .loginPage .loginGrid {
+        height: 80vh;
+        width: 75%;
+    }
+    .loginPage .loginGrid .loginForm {
+        display: flex;
+        justify-content: center;
+        align-items: none;
+        flex-direction: column;
+        padding: 0 120px;
+        background-color: #fafffb;
+        border-radius: 0 30px 30px 0;
+        color: #a4a6aa;
+    }
+    .loginPage .loginGrid .loginForm h1 {
+        margin-bottom: 20px;
+        text-align: center;
+        font-family: "Pacifico";
+    }
+    .loginPage .loginGrid .loginForm h1 span {
+        color: #79a185;
+    }
+    .loginPage .loginGrid .loginForm .input-container {
+        margin: 7px 0;
+    }
+    .loginPage .loginGrid .loginForm .input-container input {
+        margin-top: 5px;
+        padding: 10px;
+        width: 100%;
+    }
+    .loginPage .loginGrid .loginForm input[type=submit] {
+        margin-top: 10px;
+    }
+    .loginPage .loginGrid .loginForm .hr {
+        margin-top: 30px;
+    }
+    .loginPage .loginGrid .loginForm .register {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+.page-container {
+    height: auto;
+    width: 100%;
+    background-color: #17181c;
+    font-family: "Inter";
+}
+
+.page-container .page-header {
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    background-color: #e5feee;
+    padding: 0 16vw;
+    font-size: 20px;
+    position: fixed;
+    top: 0;
+}
+
+.page-container .page-header .logo {
+    font-family: "Pacifico";
+}
+
+.page-container .page-header .logo span {
+    color: #17181c;
+}
+
+.page-container .page-header .menu {
+    font-family: "Poppins";
+    font-size: 15px;
+}
+
+.page-container .page-header .menu li {
+    display: inline-block;
+    padding: 15px;
+}
+
+.page-container .page-header .menu li a {
+    color: #a4a6aa;
+}
+
+.page-container .page-header .name {
+    font-size: 15px;
+    font-family: "Poppins";
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: none;
+}
+
+.page-container .content {
+    height: 1000vh;
+    width: 100%;
+    padding: 30px 14vw 0px 14vw;
+    display: grid;
+    grid-template-columns: 2fr 4fr 2fr;
+    margin-top: 55px;
+}
+
+.page-container .content .feeds {
+    height: auto;
+    overflow: hidden;
+}
+
+.page-container .content .feeds .post {
+    height: 13vh;
+    width: 100%;
+    background-color: #e5feee;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.page-container .content .feeds .post .post-heading {
+    display: flex;
+    justify-content: none;
+    align-items: center;
+    height: 8vh;
+    width: 100%;
+    margin: 0 20px;
+}
+
+.page-container .content .feeds .post .post-heading h4 {
+    font-weight: 200;
+    font-size: 15px;
+}
+
+.page-container .content .feeds .post hr {
+    border: 1px #17181c solid;
+}
+
+.page-container .content .feeds .post .post-footer {
+    display: flex;
+    justify-content: none;
+    align-items: center;
+    height: 5vh;
+    width: 100%;
+    margin: 0 20px;
+}
+
+.page-container .content .feeds .post .post-footer p {
+    margin-left: 6px;
+    font-size: 15px;
+}
+
+.page-container .content .feeds .feeds-content {
+    height: 5vh;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.page-container .content .feeds .feeds-content .poster-image {
+    display: flex;
+    justify-content: none;
+    align-items: center;
+}
+
+.page-container .content .feeds .feeds-content .poster-image img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.page-container .content .feeds .feeds-content .poster-image .poster-info .username {
+    margin-bottom: 4px;
+    font-size: 13px;
+    color: #17181c;
+}
+
+.page-container .content .feeds .feeds-content .poster-image .poster-info .poster-name span {
+    margin-left: 6px;
+    font-size: 14px;
+    color: #17181c;
+}
+
+.page-container .content .feeds .feeds-content .caption {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.page-container .content .feeds .feeds-content .post-image {
+    margin-top: 20px;
+}
+
+.page-container .content .feeds .feeds-content .post-image img {
+    height: auto;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.page-container .content .feeds .feeds-content .interaction {
+    height: 4vh;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.page-container .content .feeds .feeds-content .interaction i {
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.page-container .content .feeds .feeds-content .comment {
+    display: flex;
+    justify-content: none;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+}
+
+.page-container .content .feeds .feeds-content .comment input {
+    border: none;
+    padding: 13px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #17181c;
+    color: #fafffb;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.post-container {
+    margin-bottom: 20px;
+    background: #e5feee;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.avatar {
+    height: 50px;
+    width: 50px;
+    border: 1px #000 solid;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.page-container .content .feeds .feeds-content {
+    height: 100vh;
+    width: 100%;
+}
+
+.add-post {
+    position: fixed;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 70vh;
+    width: 40%;
+    background-color: green;
+    border-radius: 15px;
+    font-family: "Inter";
+    display: none;
+}
+
+.add-post .post-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px silver solid;
+    font-size: 12px;
+    position: relative;
+}
+
+.add-post .post-heading #close {
+    position: absolute;
+    right: 20px;
+}
+
+.add-post .post-images {
+    display: flex;
+    justify-content: none;
+    align-items: center;
+    padding: 20px;
+}
+
+.add-post .post-images .avatar {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.add-post .post-images .poster-infos .usernames {
+    margin-bottom: 4px;
+    font-size: 13px;
+    color: #17181c;
+}
+
+.add-post .input-post {
+    height: 23vh;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.add-post .input-post textarea {
+    height: 100%;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.add-post .additional-post {
+    height: 10vh;
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px #000 solid;
+    margin: 0 20px;
+    padding: 0 10px;
+    font-size: 15px;
+}
+
+.add-post .post-btn-container {
+    height: 10vh;
+    width: 93%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.add-post .post-btn-container button {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 5px;
+    border: 1px silver solid;
+}

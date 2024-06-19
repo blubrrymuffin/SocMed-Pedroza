@@ -1,0 +1,197 @@
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Pacifico&display=swap";
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.profile-container {
+    background-color: #e5feee;
+    font-family: "Inter";
+    color: #353232;
+}
+
+.profile-container .profile-header {
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 0 16vw;
+    font-size: 20px;
+    position: fixed;
+    top: 0;
+}
+
+.profile-container .profile-header .logo {
+    font-family: "Pacifico";
+    color: #ff0a84;
+}
+
+.profile-container .profile-header .menu {
+    font-family: "Poppins";
+    font-size: 15px;
+}
+
+.profile-container .profile-header .menu li {
+    display: inline;
+    margin: 0 50px;
+}
+
+.profile-container .profile-header .menu li a {
+    color: #000000;
+}
+
+.profile-container .profile-header .name {
+    font-size: 15px;
+    font-family: "Poppins";
+    text-transform: capitalize;
+}
+
+.profile-grid {
+    height: 98vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    background-color: #e79494;
+    padding: 0 10vw;
+    gap: 20px;
+}
+
+.profile-grid > div {
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.profile-grid .profile {
+    border: none;
+    position: relative;
+}
+
+.profile-grid .profile-info {
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.profile-grid .profile h1 {
+    font-size: 25px;
+}
+
+.profile-grid .profile h2 {
+    font-size: 18px;
+    font-weight: lighter;
+    color: #ffffff;
+}
+
+.profile-grid .profile-edit {
+    padding: 8px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px #ff00c8 solid;
+    background: #d510e7;
+    margin: 20px 0;
+}
+
+.profile-grid .profile-inline {
+    margin-bottom: 20px;
+}
+
+.profile-grid .profile p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.profile-grid .profile .edit-modal {
+    height: 85%;
+    width:80%;
+    position: fixed ;
+    top: 50px;
+    background: #d85757;
+    color: white;
+    overflow-y: scroll;
+    display: none;
+    padding: 0 80px;
+    border-radius: 10px;
+}
+
+.profile-grid .profile-update {
+    margin-top: 20px;
+}
+
+.profile-grid .profile-update input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px #000000 solid;
+}
+
+.profile-grid .profile-update select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px #ffffff solid;
+}
+
+.profile-grid .profile-image {
+    height: 300px;
+    width: 300px;
+    border: 1px #ffffff solid;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 1366px) {
+    .profile-grid .profile {
+        overflow-x: hidden;
+    }
+    .profile-grid .profile-info {
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+    .profile-grid .profile h1 {
+        font-size: 20px;
+    }
+    .profile-grid .profile h2 {
+        font-size: 14px;
+    }
+    .profile-grid .profile-edit {
+        padding: 8px;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px #000 solid;
+        background: #f0f3f6;
+        margin: 15px 0;
+    }
+    .profile-grid .profile-inline {
+        font-size: 14px;
+    }
+    .profile-grid .profile p {
+        font-size: 12px;
+    }
+    .profile-grid .profile-update {
+        margin-top: 10px;
+        font-size: 12px;
+    }
+    .profile-grid .profile-update input {
+        padding: 5px;
+        font-size: 12px;
+    }
+    .profile-grid .profile-image {
+        height: 250px;
+        width: 250px;
+        border: 1px #ffffff solid;
+    }
+}

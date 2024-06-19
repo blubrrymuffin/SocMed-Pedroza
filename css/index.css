@@ -1,0 +1,128 @@
+/* Resetting default margin and padding */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+        /* Fallback color */
+        background-color: #f0f0f0;
+        /* Gradient background */
+        background-image: linear-gradient(to bottom right, #ff69b4, #6495ed, #8a2be2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+/* Header styles */
+h1 {
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Pacifico', cursive;
+    color: #333;
+}
+.loginPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.loginGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.loginImage {
+    background-image: url('path_to_your_image.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.loginForm {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginForm h1 {
+    margin-bottom: 20px;
+}
+
+.loginForm h1 span {
+    color: #e61352;
+}
+
+.input-container {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-container label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+    font-size: 14px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-container input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.loginForm input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.loginForm input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.hr {
+    margin: 20px 0;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+}
+
+.register {
+    font-size: 14px;
+}
+
+.register a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register a:hover {
+    text-decoration: underline;
+}
