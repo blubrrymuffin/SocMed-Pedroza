@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends</title>
+    <link rel="stylesheet" href="css/friends.css">
+</head>
+<body>
+
+    <div class="page-container">
+        <div class="left-section">
+            <div class="social-media-logo"><h2>Insta Clone</h2></div>
+            <div class="navbar">
+                <input class="search" placeholder="Search" type="text">
+                <ul>
+                    <li class="goHome">Home</li>
+                    <li>Find Friends</li>
+                    <li>News Feeds</li>
+                </ul>
+            </div>
+            <button id="logout">Logout</button>
+        </div>
+
+
+        <div class="feeds-section">
+            <div class="heading">
+                <div class="home-nav">
+                    <p>HOME</p>
+                    <div class="post-selection">
+                        <ul>
+                            <li>About</li>
+                            <li>Explore</li>
+                            <li><a href="friends.html">Mutual Friends</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="profile-nav">
+                    <i class='bx bxs-bell bell'></i>
+                    <div class="name">
+                        <h4 id="anotherName"></h4>
+                        <img id="name-avatar" src="" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="feeds-content">
+                <div class="feeds">
+                    <div style="display: flex; justify-content: center; align-items: center; color: #fff;" class="posting-section">
+                        <h1>People you may know</h1>
+                    </div>
+
+                    <div class="people">
+                        
+                    </div>
+
+                </div>
+                
+                <div class="profile-section">
+                    <div class="profile-link">
+
+                        <img id="profile-image" src="" alt="">
+                        <p id="fullname"></p>
+                        <p id="following">1000 followers <span>10 following</span></p>
+                        <button type="button">See Profile</button>
+                    </div>
+
+                    <div class="friends-list">
+                        <h4>My  Friends</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ||||||||||||||||||||||||||||||||||| TEMPLATE SECTION |||||||||||||||||||||||||||||||||||||| -->
+    <template class="people-card">
+        <div class="people-template">
+        <img src="" class="people-template-image" alt="">
+        <div class="people-template-info">
+            <h3 class="people-template-name"></h3>
+            <h4 class="people-template-username"></h4>
+    </div>
+    <div class="btn">
+        <button class="add-friend">Add Friend</button>
+        <button>Remove</button>
+      </div>
+    </div>
+</template>
+
+    <!-- |||||||||||||||||||||||||||||||||||||| BACK END ||||||||||||||||||||||||||||||||||||||||||||| -->
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="js/main.js"></script>
+    
+
+    <script>
+    $(document).ready(function() {
+    // Use event delegation to handle click events on the add-friend button
+    $(document).on('click', '.add-friend', function() {
+        var personId = event.target.getAttribute('data-person-id');
+            addFriend(personId);
+    });
+
+    var id = localStorage.getItem("id");
+    var name = localStorage.getItem("name");
+    var username = localStorage.getItem('username');
+    var image = localStorage.getItem('image');
+
+        var firstName = name.split(" ").slice(0, -1).join(" ");
+        document.getElementById("fullname").textContent = name;
+        document.getElementById("anotherName").textContent = firstName;
+        document.getElementById("profile-image").src = "php/" + image;
+        document.getElementById("name-avatar").src = "php/" + image;
+        document.getElementById("poster-image").src = "php/" + image;
+});
+document.querySelector('.goHome').addEventListener("click", () => {
+    window.location.href = "feeds.html";
+})
+
+
+
+
+    </script>
+</body>
+</html>

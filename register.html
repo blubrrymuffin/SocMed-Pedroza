@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <div class="loginPage">
+        <div class="loginGrid">
+            <div class="loginImage"></div>
+            <div class="loginForm">
+                <h1>Insta <span>Clone</span></h1>
+                <form id="registrationForm">
+                  <div class="input-container">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                  </div>
+                   <div class="input-container">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                   </div>
+                   <div class="input-container">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                   </div>
+                   <input type="submit" id="btnRegister" name="btnRegister" value="Sign up">
+                </form>
+
+                <p class="hr">---------- or -----------</p>
+
+               <p class="register">Already have an account? <a href="index.html">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

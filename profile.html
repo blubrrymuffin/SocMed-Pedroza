@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+
+<div class="profile-container">
+    <div class="profile-header">
+        <div class="logo"><h3>Insta <span>Clone</span></h3></div>
+        <div class="menu">
+            <ul>
+                <li><a href="feeds.html">Home</a></li>
+            </ul>
+        </div>
+        <div class="name"><h3 id="name"></h3></div>
+    </div>
+
+    <div class="profile-grid">
+        <div class="profile">
+            <div class="profile-image"><img style="height: 100%; width: 100%; border-radius: 50%;" id="profileImage" src="" alt=""></div>
+            <div class="profile-info">
+                <h1 id="profile-name"></h1>
+                <h2 id="profile-username"></h2>
+                <button class="profile-edit">Edit Profile</button>
+                <div class="profile-inline">
+                    <span>10000 followers</span> &#183;
+                    <span>10 following</span>
+                </div>
+
+                <p id="profile-gender"></p>
+                <p id="profile-location"></p>
+                <p id="profile-civil"></p>
+                <p id="profile-birthdate"></p>
+            </div>
+
+            <div class="edit-modal">
+                <div class="profile-image"><img style="height: 100%; width: 100%; border-radius: 50%;" id="previewImage" src="" alt=""></div>
+                <div class="profile-info">
+                    <form id="editProfile" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="id" id="id">
+                        <div class="profile-update">
+                            <label for="name">Name:</label><br>
+                            <input type="text" id="fullName" name="name" required><br>
+                        </div>
+                        <div class="profile-update">
+                            <label for="username">Username:</label><br>
+                            <input type="text" id="username" name="username" required><br>
+                        </div>
+                        <div class="profile-update">
+                            <label for="password">Password:</label><br>
+                            <input type="password" name="password" id="password" required>
+                        </div>
+                        <div class="profile-update">
+                            <label for="gender">Gender</label>
+                            <select name="gender" id="gender">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+
+                        <div class="profile-update">
+                            <label for="birthdate">Civil Status:</label><br>
+                            <input type="text" name="civilStatus" id="civilStatus">
+                        </div>
+
+                        <div class="profile-update">
+                            <label for="birthdate">Location:</label><br>
+                            <input type="text" name="location" id="location">
+                        </div>
+
+                        <div class="profile-update">
+                            <label for="birthdate">Birthdate:</label><br>
+                            <input type="date" id="birthdate" name="birthdate">
+                        </div>
+
+                        <div class="profile-update">
+                            <label for="image">Profile Image:</label><br>
+                            <input type="file" id="image" name="image">
+                            <input type="text" id="imagePath" disabled>
+                        </div>
+
+                        <button class="profile-edit">Update Profile</button>
+                    </form>
+                    <button class="edit-modal-close">Cancel</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="profile-post"></div>
+    </div>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+<script src="js/main.js"></script>
+<script src="js/profile.js"></script>
+
+
+</body>
+</html>

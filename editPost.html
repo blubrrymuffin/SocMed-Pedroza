@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+    <link rel="stylesheet" href="css/editPost.css">
+</head>
+<body>
+
+    <div class="post-container">
+        <span class="close">&times;</span>
+        <h1>Edit Post</h1>
+        <input type="hidden" id="postId">
+        <input type="hidden" id="userId">
+        <h4>Caption</h4>
+        <div class="caption">
+            <textarea id="edit-caption" placeholder="Edit caption"></textarea>
+        </div>
+        <div class="post-image">
+            <label for="edit-image">Edit Image</label> <br>
+            <input type="file" id="edit-image">
+            <img style="display: none;" id="preview-image" src="" alt="Preview Image">
+        </div>
+        <button id="save-changes">Save Changes</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // Retrieve data from localStorage
+        var postId = localStorage.getItem('editPostId');
+        var userId = localStorage.getItem('editUserId');
+        var caption = localStorage.getItem('editCaption');
+        var imageSrc = localStorage.getItem('editImageSrc');
+
+        // Populate form fields with retrieved data
+        document.getElementById('postId').value = postId;
+        document.getElementById('userId').value = userId;
+        document.getElementById('edit-caption').value = caption;
+        document.getElementById('preview-image').src = imageSrc;
+        document.getElementById('save-changes').addEventListener('click', function() {
+            var updatedCaption = document.getElementById('edit-caption').value;
+            var updatedImage = document.getElementById('edit-image').files[0];
+
+            var formData = new FormData();
+            formData.append('id', postId);
+            formData.append('caption', updatedCaption);
+            formData.append('image', updatedImage);
+
+            $.ajax({
+                url: 'php/editPost.php',
+                type: 'POST',
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function(response) {
+                    alert('Post updated successfully.');
+                    window.location.href = "feeds.html";
+                },
+                error: function(xhr, status, error) {
+                    // Handle error response
+                    console.error('Error updating post:', error);
+                }
+            });
+        });
+
+        document.querySelector(".close").addEventListener('click', () => {
+           window.location.href  = "feeds.html";
+        })
+    </script>
+
+</body>
+</html>

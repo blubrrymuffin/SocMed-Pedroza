@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed</title>
+    <link rel="stylesheet" href="css/feeds.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="left-section">
+            <div class="social-media-logo"><h2>Insta Clone</h2></div>
+            <div class="navbar">
+                <input class="search" placeholder="Search" type="text">
+                <ul>
+                    <li>Home</li>
+                    <li id="find-friend">Find Friends</li>
+                    <li>News Feeds</li>
+                </ul>
+            </div>
+            <button id="logout">Logout</button>
+        </div>
+        <div class="feeds-section">
+            <div class="heading">
+                <div class="home-nav">
+                    <p>HOME</p>
+                    <div class="post-selection">
+                        <ul>
+                            <li>About</li>
+                            <li>Explore</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="profile-nav">
+                    <i class='bx bxs-bell bell' id="notification"></i>
+                    <div class="name">
+                        <h4 id="anotherName"></h4>
+                        <img id="name-avatar" src="" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="feeds-content">
+                <div class="feeds">
+                    <div class="posting-section">
+                        <form id="addPost" enctype="multipart/form-data">
+                            <div class="write-post">
+                                <img id="poster-image" src="" alt="">
+                                <textarea placeholder="What's on your mind?" id="get-text" cols="30" rows="10"></textarea>
+                            </div>
+                            <div class="attach-image">
+                                <input type="file" id="postImage" name="postImage[]" multiple>
+                                <button id="create-post" type="button">Post</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="feeds">
+                        <!-- Feeds will be populated here -->
+                    </div>
+                </div>
+                <div class="profile-section">
+                    <div class="profile-link">
+                        <img id="profile-image" src="" alt="">
+                        <p id="fullname"></p>
+                        <p id="following">1000 followers <span>10 following</span></p>
+                        <button id="see-profile" type="button">See Profile</button>
+                    </div>
+                    <div class="friends-list">
+                        <h4>My Friends</h4>
+                        <div class="friend-list-container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <template class="poster-template">
+        <div class="post-container">
+            <input type="hidden" id="userId">
+            <input type="hidden" id="postId">
+            <div class="poster-image">
+                <img class="avatar" alt="">
+                <div class="poster-info">
+                    <p class="username" style="display: none;"></p>
+                    <p class="poster-name"><span class=""></span></p>
+                    <p class="poster-time" style="font-size: 12px; margin-top: 7px;"></p>
+                </div>
+                <div style="float: right;" class="btn-container">
+                    <button id="post-edit">Edit</button>
+                    <button id="post-delete">Delete</button>
+                </div>
+            </div>
+            <div class="caption"><p class="display-caption"></p></div>
+            <div class="post-image"></div>
+            <div class="comment">
+                <div class="inline-comment">
+                    <button id="toggleLike">Like</button>
+                    <span>Comment</span>
+                    <span>Share</span>
+                </div>
+                <br>
+                <input class="comment-input" type="text" placeholder="Write your comment . . ."/>
+                <button id="comment-btn">Add</button>
+            </div>
+            <p style="padding: 20px; text-align: center; border-top: #26282d solid 1px; font-size: 12px;" class="open-comment-modal">View all comments</p>
+        </div>
+    </template>
+    <template id="friends-template">
+        <img src="" class="friends-image" alt="">
+        <h3 style="font-size: 15px;" id="friends-name"></h3>
+        <button style="margin-bottom: 10px; display: block;">Unfollow</button>    
+    </template>
+    <div style="overflow: auto; height: 120px; width: 20%;" class="modal notification-modal" id="notificationModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div style="margin-top: 10px" class="notification"></div>
+        </div>
+    </div>
+    <div class="comment-modal-container" id="commentModal">
+        <div class="modal-content">
+            <h1>Comments on this post</h1>
+            <span class="close">&times;</span>
+            <div class="comments-container"></div>
+        </div>
+    </div>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="js/like.js"></script>
+    <script src="js/fetchLike.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/createPost.js"></script>
+    <script src="js/friendRequest.js"></script>
+    <script src="js/comments.js"></script>
+    <script src="js/mutualFriends.js"></script>
+    
+
+</body>
+</html>

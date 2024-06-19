@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .loginPage {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .loginGrid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .loginImage {
+            background-image: url('path_to_your_image.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .loginForm {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loginForm h1 {
+            margin-bottom: 20px;
+        }
+
+        .input-container {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .input-container label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .input-container input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .input-container input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .loginForm input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .loginForm input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .hr {
+            margin: 20px 0;
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .register {
+            font-size: 14px;
+        }
+
+        .register a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .register a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="loginPage">
+        <div class="loginGrid">
+            <div class="loginImage"></div>
+            <div class="loginForm">
+                <h1>Insta <span>Clone</span></h1>
+                <form id="loginForm">
+                  <div class="input-container">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username">
+                  </div>
+                   <div class="input-container">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                   </div>
+                    <input type="submit" value="Login">
+                </form>
+
+                <p class="hr">---------- or -----------</p>
+
+               <p class="register">Are you new? <a href="register.html">Create an Account</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/fetchLike.js"></script>
+
+    
+</body>
+</html>
